@@ -1,0 +1,150 @@
+:root {
+    --red: #7A0F13;
+    --orange: #CD430E;
+    --yellow: #FFC636;
+    --gold: #C59954;
+    --dark-purple: #282025;
+    --brown-ish: #4C3737;
+    --grey-blue: #585A6B;
+    --gray: #716665;
+    --light-brown: #A79B8F;
+    --cream: #FEF9E0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* padding and border count inside of the box width */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;                        /*smooth nav-link scrolling */
+    scroll-padding-top: var(--header-height);       
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--cream);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+    line-height: 1.2;
+}
+
+a{
+    color: var(--gold);
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: var(--header-height);
+    background-color: var(--dark-purple);
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;            /*vertically centered*/
+    padding: 0 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--cream);
+}
+
+.logo-initials {
+    font-family: var(--font-head);
+    font-weight: 700;
+    background-color: var(--gold);
+    color: var(--dark-purple);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.3rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.logo-name {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--cream);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.2rem 0.4rem;
+    background-color: var(--gold);
+    color: var(--brown-ish);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    background-color: var(--yellow);
+}
+
+  .menu-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav-list {
+            display: none;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        /* MAGIC HAPPENS HERE: If the container or anything inside it gets focus, show the list */
+        .menu-container:focus-within .nav-list {
+            display: block;
+        }
+
+        /* Layout spacing for the single page sections */
+        section {
+            margin-top: 800px;
+            padding: 40px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
