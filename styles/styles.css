@@ -125,26 +125,25 @@ main h2 {
     background-color: var(--yellow);
 }
 
-  .menu-container {
-            display: inline-block;
-            position: relative;
-        }
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cream);
+    min-width: 180px;
 
-        .nav-list {
-            display: none;
-            margin-top: 10px;
-            padding-left: 20px;
-        }
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+}
 
-        /* MAGIC HAPPENS HERE: If the container or anything inside it gets focus, show the list */
-        .menu-container:focus-within .nav-list {
-            display: block;
-        }
+.dropdown-menu.is-expanded {
+    max-height: 300px;
+    opacity: 1;
+}
 
-        /* Layout spacing for the single page sections */
-        section {
-            margin-top: 800px;
-            padding: 40px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-        }
+.dropdown-menu li a:hover {
+    background-color: var(--yellow);
+}

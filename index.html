@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People Behind AI</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="javascript/scripts.js" defer></script>
 </head>
 <body>
      <header class="site-header">
@@ -14,15 +15,18 @@
         <nav class="main-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="#">Intro</a></li>
-                <ul class="menu-container"><a href="#">Experts</a>
-                    <div class="nav-list">
-                    <li>R</li>
-                    <li>Y</li>
-                    <li>T</li>
-                    <li>L</li>
-                    <li>S</li>
-                    </div>
-                </ul>
+                <li>
+                    <a class="dropdown-trigger" id="menuTrigger">
+                        Experts
+                    </a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="#" class="dropdown-link">r</a></li>
+                        <li><a href="#" class="dropdown-link">r</a></li>
+                        <li><a href="#" class="dropdown-link">r</a></li>
+                        <li><a href="#" class="dropdown-link">r</a></li>
+                        <li><a href="#" class="dropdown-link">r</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Comparison</a></li>
                 <li><a href="#">Reflection</a></li>
                 <li><a href="#">Finale</a></li>
