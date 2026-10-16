@@ -81,14 +81,14 @@ main h2 {
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
-    color: var(--cream);
+    color: var(--light-brown);
 }
 
 .logo-initials {
     font-family: var(--font-head);
     font-weight: 700;
-    background-color: var(--gold);
-    color: var(--dark-purple);
+    background-color: var(--red);
+    color: var(--cream);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -101,8 +101,9 @@ main h2 {
 .logo-name {
     font-family: var(--font-head);
     font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--cream);
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--gold);
 }
 
 .main-nav ul {
@@ -111,39 +112,77 @@ main h2 {
     gap: 1rem;
 }
 
-.main-nav a {
+.main-nav a,
+.menu-trigger {
     display: block;
     padding: 0.2rem 0.4rem;
-    background-color: var(--gold);
-    color: var(--brown-ish);
+    background-color: var(--red);
+    color: var(--cream);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
 }
 
+.menu-trigger {
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.45rem 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-trigger:hover {
+    background-color: var(--orange);
+}
+
+.submenu-item {
+    background-color: var(--red);
+    border-radius: 0.5rem;
+    margin: 0.3rem;
+}
+
 .main-nav a:hover {
-    background-color: var(--yellow);
+    background-color: var(--orange);
 }
 
-.dropdown-menu {
-    list-style: none;
+.dropdown {
+    position: relative;
+}
+
+/* the submenu is hidden and placed directly under its parent */
+.submenu {
+    display: none !important;
     position: absolute;
-    top: 100%;
+    top: 100%; /* start right below parent link */
     left: 0;
-    background-color: var(--cream);
-    min-width: 180px;
-
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--dark-purple);
+    box-shadow: 0 6px 12px rgba(0,0,0, 0.25);
+    border-radius: 0.5rem;
+    z-index: 10;
 }
 
-.dropdown-menu.is-expanded {
-    max-height: 300px;
-    opacity: 1;
+.submenu a {
+    font-weight: 400;
+    border-top: 1px soolid rgba(255,255,255, 0.1);
 }
 
-.dropdown-menu li a:hover {
-    background-color: var(--yellow);
+/* show the submenu on mouse hover OR when a link inside has KEYBOARD focus 
+    :focus-visible matches only keyboard (Tab) focuse, not a mouse click,
+    so once the mouse rolls of the menu, the submenu hides again    
+*/
+
+.dropdown.is-active .submenu {
+    display: block !important;
+}
+
+/* small arrow after links that have a dropdown */
+.dropdown > button::after {
+    content: " \25be"; /*creates arrow*/
 }
