@@ -186,3 +186,36 @@ main h2 {
 .dropdown > button::after {
     content: " \25be"; /*creates arrow*/
 }
+
+/* introduction section */
+.intro-content {
+    max-width: 50rem;
+}
+
+.intro-odd {
+    background-color: var(--red);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--orange);
+}
+
+.intro-odd h3 {
+    background-color: var(--cream);
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    max-width: 10rem;
+}
+
+.intro-even {
+    background-color: var(--orange);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--red);
+}
+
+.intro-even h3 {
+    background-color: var(--cream);
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    max-width: 10rem;
+}
