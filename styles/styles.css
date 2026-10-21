@@ -187,35 +187,118 @@ main h2 {
     content: " \25be"; /*creates arrow*/
 }
 
-/* introduction section */
-.intro-content {
+
+/* css for odd section */
+.odd-section {
+    background-color: var(--cream);
+    border-top: 5px solid var(--orange);
+}
+
+.odd-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.odd-info {
     max-width: 50rem;
 }
 
-.intro-odd {
+.odd-top {
+    background-color: var(--gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--grey-blue);
+    color: var(--dark-purple);
+    margin: 1rem;
+}
+
+.odd-top h3 {
+    background-color: var(--cream);
+    color: var(--dark-purple);
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    max-width: 10rem;
+}
+
+.odd-bottom {
+    background-color: var(--grey-blue);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--gray);
+    margin: 1rem;
+    color: var(--gold);
+}
+
+.odd-bottom h3 {
+    background-color: var(--cream);
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    max-width: 10rem;
+    color: var(--dark-purple);
+}
+
+.odd-img img {
+    border-top: 8px solid var(--gray);
+    border-left: 8px solid var(--gray);
+    border-bottom: 8px solid var(--grey-blue);
+    border-right: 8px solid var(--grey-blue);
+    border-radius: 4rem;
+}
+
+/* css for even sections */
+.even-section {
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    border-top: 5px solid var(--red);
+}
+
+.even-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.even-info {
+    max-width: 50rem;
+}
+
+.even-top {
     background-color: var(--red);
     padding: 2rem;
     border-radius: 1rem;
     border: 3px dashed var(--orange);
+    color: var(--gold);
+    margin: 1rem;
 }
 
-.intro-odd h3 {
+.even-top h3 {
     background-color: var(--cream);
+    color: var(--dark-purple);
     padding: 0.5rem 0;
     border-radius: 1rem;
     max-width: 10rem;
 }
 
-.intro-even {
+.even-bottom {
     background-color: var(--orange);
     padding: 2rem;
     border-radius: 1rem;
     border: 3px dashed var(--red);
+    margin: 1rem;
+    color: var(--dark-purple);
 }
 
-.intro-even h3 {
+.even-bottom h3 {
     background-color: var(--cream);
     padding: 0.5rem 0;
     border-radius: 1rem;
     max-width: 10rem;
+    color: var(--dark-purple);
+}
+
+.even-img img {
+    border-top: 8px solid var(--red);
+    border-left: 8px solid var(--red);
+    border-bottom: 8px solid var(--orange);
+    border-right: 8px solid var(--orange);
+    border-radius: 4rem;
 }
