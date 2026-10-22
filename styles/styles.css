@@ -203,6 +203,11 @@ main h2 {
     max-width: 50rem;
 }
 
+.odd-info h3 {
+    display: flex;
+    justify-content: center;
+}
+
 .odd-top {
     background-color: var(--gray);
     padding: 2rem;
@@ -259,6 +264,11 @@ main h2 {
 
 .even-info {
     max-width: 50rem;
+}
+
+.even-info h3 {
+    display: flex;
+    justify-content: center;
 }
 
 .even-top {
