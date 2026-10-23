@@ -295,6 +295,7 @@ main h2 {
     border: 3px dashed var(--red);
     margin: 1rem;
     color: var(--dark-purple);
+    min-width: 40rem;
 }
 
 .even-bottom h3 {
@@ -311,4 +312,46 @@ main h2 {
     border-bottom: 8px solid var(--orange);
     border-right: 8px solid var(--orange);
     border-radius: 4rem;
+}
+
+
+
+/* specific stuff */
+.discussion {
+    max-width: 18rem !important;
+}
+
+
+
+.source-top {
+    background-color: var(--red);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--orange);
+    color: var(--gold);
+    margin: 1rem;
+}
+
+.source-bottom {
+    background-color: var(--orange);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px dashed var(--red);
+    margin: 1rem;
+    color: var(--dark-purple);
+}
+
+.source-top,
+.source-bottom {
+    min-width: 50rem !important;
+}
+
+
+.source-top h3,
+.source-bottom h3 {
+    background-color: var(--cream);
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    max-width: 15rem;
+    color: var(--dark-purple);
 }
